@@ -7,33 +7,54 @@ namespace ite_chsharp_training_tests
     [TestClass]
     public class FizzBuzzMainTests
     {
-        private FizzBuzzMain _classUnderTest;
-
-        [TestInitialize]
-        public void Initialize()
+        //Rule#1: If the number is evenly divisible by 3, return Fizz
+        //Rule#2: If it is evebly divisible by 5 return Buzz
+        //Rule#3: If the numbers are evenly divisible by 3 abd 5, return FizzBuzz
+        //Rule#4: If it does not match any of the other rules just return a number
+      [TestMethod]
+        public void When_The_Number_Is_One()
         {
-            _classUnderTest = new FizzBuzzMain();
+         //arrange
+            FizzBuzzMain program = new FizzBuzzMain();
+         //act
+            string _result = program.DoTheFizzBuzz(1);
+         //Assert
+            Assert.AreEqual("1",_result);
+            
         }
+      [TestMethod]
+      public void When_The_Number_Is_Two()
+      {
+          //arrange
+          FizzBuzzMain program = new FizzBuzzMain();
+          //act
+          string _result = program.DoTheFizzBuzz(2);
+          //Assert
+          Assert.AreEqual("2", _result);
 
-        [TestMethod]
-        public void ClassUnderTest_Is_Intialized_And_Is_Of_The_Right_Type()
-        {
-            Assert.IsInstanceOfType(_classUnderTest, typeof(FizzBuzzMain));
-        }
+      }
+      [TestMethod]
+      public void When_The_Number_Is_Three()
+      {
+          //arrange
+          FizzBuzzMain program = new FizzBuzzMain();
+          //act
+          string _result = program.DoTheFizzBuzz(3);
+          //Assert
+          Assert.AreEqual("Fizz", _result);
 
-        [TestMethod]
-        public void The_ExecuteFizzBuzz_Method_Executes_Without_Exception()
-        {
-            //Arrange
-            string result;
-            _classUnderTest.Iterations = 1;
+      }
+      [TestMethod]
+      public void When_The_Number_Is_five()
+      {
+          //arrange
+          FizzBuzzMain program = new FizzBuzzMain();
+          //act
+          string _result = program.DoTheFizzBuzz(5);
+          //Assert
+          Assert.AreEqual("Buzz", _result);
 
-
-            //Act
-            result = _classUnderTest.ExecuteFizzBuzz();
-
-            Assert.IsNotNull(result);
-            Assert.IsTrue(result.Contains("FizzBuzz"));
-        }
+      }
     }
+
 }

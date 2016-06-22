@@ -55,6 +55,29 @@ namespace ite_chsharp_training_tests
           Assert.AreEqual("Buzz", _result);
 
       }
+      [TestMethod]
+      public void When_The_Number_Is_Three_And_Five()
+      {
+          //arrange
+          FizzBuzzMain program = new FizzBuzzMain();
+          //act
+          string _result = program.DoTheFizzBuzz(15);
+          //Assert
+          Assert.AreEqual("FizzBuzz", _result);
+
+      }
+      [TestMethod]
+      public void When_The_Number_Is_AnyNumber()
+      {
+          //arrange
+          FizzBuzzMain program = new FizzBuzzMain();
+          //act
+          string _result = program.DoTheFizzBuzz(13);
+          //Assert
+          Assert.AreEqual("13", _result);
+
+      }
+
     }
 
 }

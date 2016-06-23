@@ -77,7 +77,50 @@ namespace ite_chsharp_training_tests
           Assert.AreEqual("13", _result);
 
       }
+      [TestMethod]
+      public void LoopsTestingWhen5()
+      {
+          //arrange
+          Loops program2 = new Loops();
+          //act
+          string results = program2.GetTheValueFromLoop(5);
+          //Assert
+          Assert.AreEqual("Buzz", results);
 
+      }
+      [TestMethod]
+      public void LoopsTestingWhen3()
+      {
+          //arrange
+          Loops program2 = new Loops();
+          //act
+          string results = program2.GetTheValueFromLoop(3);
+          //Assert
+          Assert.AreEqual("Fizz", results);
+
+      }
+      [TestMethod]
+      public void LoopsTestingWhen3And5()
+      {
+          //arrange
+          Loops program2 = new Loops();
+          //act
+          string results = program2.GetTheValueFromLoop(15);
+          //Assert
+          Assert.AreEqual("FizzBuzz", results);
+
+      }
+      [TestMethod]
+      public void LoopsTestingWhenAnyNumber()
+      {
+          //arrange
+          Loops program2 = new Loops();
+          //act
+          string results = program2.GetTheValueFromLoop(11);
+          //Assert
+          Assert.AreEqual("11", results);
+
+      }
     }
 
 }

@@ -31,11 +31,16 @@ namespace ita_chsharp_training
                 }
                 else
                 {
-                    return number.ToString();
+                    
+                    string formatedResult = FormatNumberForReturn(number);
+                    return formatedResult;
                 }  
             
             
         }
-          
+          public string FormatNumberForReturn(int number)
+        {
+            return number.ToString();
+        }
     }
 }

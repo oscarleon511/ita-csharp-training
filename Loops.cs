@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ita_chsharp_training
 {
+   
     public class Loops
     {
+        string results = " ";
         public string GetTheValueFromLoop(int numbers)
          {
              string resuls = string.Empty;
@@ -27,9 +29,14 @@ namespace ita_chsharp_training
                 {
                     return "Fizz";
                 }
+                else
+                {
+                    return numbers.ToString();
+                }
 
             }
-             return numbers.ToString();
+            return results;
+             
                   
           }
         
